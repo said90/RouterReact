@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Productos from './Productos'
-import Nosotros from './Nosotros'
-import Error from './Error'
+import Productos from './Productos/Productos'
+import Nosotros from './Nosotros/Nosotros'
+import Error from './Error/Error'
 import infoProductos from '../datos/datos.json';
-import Header from './Header'
-import SingleProduct from './SingleProduct'
-import Navegacion from './Navegacion'
+import Header from './Header/Header'
+import SingleProduct from './SingleProduct/SingleProduct'
+import Navegacion from './Navegacion/Navegacion'
+import Contacto from './Contacto/Contacto'
 
 
 export class Router extends Component {
@@ -50,6 +51,7 @@ export class Router extends Component {
                             )
                         }} />
 
+                        <Route exact path="/contacto" component={Contacto} />
 
                         <Route component={Error} />
 
